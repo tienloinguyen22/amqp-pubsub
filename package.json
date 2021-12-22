@@ -6,6 +6,7 @@
     "node": ">= 16.13 <17"
   },
   "devDependencies": {
+    "@types/amqplib": "^0.8.2",
     "@types/jest": "~27.0.2",
     "@types/node": "~16.11.6",
     "@typescript-eslint/eslint-plugin": "~5.7.0",
@@ -28,11 +29,14 @@
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "publisher": "node ./build/src/example/publisher.js",
+    "subscriber": "node ./build/src/example/subscriber.js"
   },
   "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "amqplib": "^0.8.0",
     "tslib": "~2.3.1"
   },
   "volta": {
